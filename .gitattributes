@@ -1,0 +1,9 @@
+# Enforce consistent line endings
+* text=auto
+
+# Force LF endings for source files
+*.py text eol=lf
+*.ipynb text eol=lf
+
+# You can also ignore venv (recommended)
+venv/ export-ignore
