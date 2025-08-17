@@ -1,13 +1,39 @@
-# Ignore Python virtual environments
+# Ignore everything by default
+*
+
+# Allow all folders (so folder structure changes are tracked)
+!*/
+# Allow Python and Jupyter files everywhere
+!**/*.py
+!**/*.ipynb
+
+# ---------------------------
+# Ignore environments
+# ---------------------------
+# Virtualenv / venv
 venv/
+.env/
+.env*/
+*.venv
+
+# Conda environments
+conda/
+conda-env/
+*.conda
+*.yaml   # typical conda env export
+*.yml
+
+# ---------------------------
+# Ignore Python cache files
+# ---------------------------
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
-# Track notebooks and Python files
-!*.ipynb
-!*.py
-
-# Ignore everything else by default
-*
-!*/   # allow folders
+# VSCode / IDE settings (optional but useful)
+.vscode/
+.idea/
